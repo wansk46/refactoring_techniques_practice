@@ -1,15 +1,12 @@
 package com.tws.refactoring.extract_method;
 
-import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Vector;
 
 public class OwingPrinter {
 
     void printOwing(String name, List<Order> orders) {
         Iterator<Order> elements = orders.iterator();
-        double outstanding = 0.0;
 
         // print banner
 //        System.out.println ("*****************************");
@@ -17,11 +14,12 @@ public class OwingPrinter {
 //        System.out.println ("*****************************");
         printBanner();
 
+        double outstanding = calculateOutstanding(orders);
         // print owings
-        while (elements.hasNext()) {
-            Order each = (Order) elements.next();
-            outstanding += each.getAmount();
-        }
+//        while (elements.hasNext()) {
+//            Order each = (Order) elements.next();
+//            outstanding += each.getAmount();
+//        }
 
         // print details
         System.out.println("name: " + name);
@@ -33,6 +31,19 @@ public class OwingPrinter {
         System.out.println ("****** Customer totals ******");
         System.out.println ("*****************************");
     }
+
+    double calculateOutstanding(List<Order> orders){
+        Iterator<Order> elements = orders.iterator();
+        double outstanding = 0.0;
+        while (elements.hasNext()) {
+            Order each = (Order) elements.next();
+            outstanding += each.getAmount();
+        }
+        return outstanding;
+    }
+
+
+
 }
 
 class Order {
