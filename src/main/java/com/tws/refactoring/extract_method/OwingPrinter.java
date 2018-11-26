@@ -22,8 +22,9 @@ public class OwingPrinter {
 //        }
 
         // print details
-        System.out.println("name: " + name);
-        System.out.println("amount: " + outstanding);
+        printDetail(name,outstanding);
+//        System.out.println("name: " + name);
+//        System.out.println("amount: " + outstanding);
     }
 
     void printBanner(){
@@ -42,6 +43,10 @@ public class OwingPrinter {
         return outstanding;
     }
 
+    void printDetail(String name, double outstanding){
+        System.out.println("name: " + name);
+        System.out.println("amount: " + outstanding);
+    }
 
 
 }
