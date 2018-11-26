@@ -1,13 +1,6 @@
 package com.tws.refactoring.extract_variable;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -21,7 +14,7 @@ public class BannerRenderTest {
         String platform = "this is platform";
         String browser = "this is browser";
 
-        bannerRender.renderBanner(platform, browser);
+        bannerRender.renderBannerForPlatformMACandBrowserIE(platform, browser);
         assertFalse(bannerRender.IsRendered());
     }
 
@@ -31,7 +24,7 @@ public class BannerRenderTest {
         String platform = "this is mac";
         String browser = "this is ie";
 
-        bannerRender.renderBanner(platform, browser);
+        bannerRender.renderBannerForPlatformMACandBrowserIE(platform, browser);
         assertTrue(bannerRender.IsRendered());
     }
 
