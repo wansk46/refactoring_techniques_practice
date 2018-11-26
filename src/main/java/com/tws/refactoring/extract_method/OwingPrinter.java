@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Vector;
 
 public class OwingPrinter {
+
     void printOwing(String name, List<Order> orders) {
         Iterator<Order> elements = orders.iterator();
         double outstanding = 0.0;
@@ -25,6 +26,12 @@ public class OwingPrinter {
         System.out.println("name: " + name);
         System.out.println("amount: " + outstanding);
     }
+
+//    void printBanner(){
+//        System.out.println ("*****************************");
+//        System.out.println ("****** Customer totals ******");
+//        System.out.println ("*****************************");
+//    }
 }
 
 class Order {
