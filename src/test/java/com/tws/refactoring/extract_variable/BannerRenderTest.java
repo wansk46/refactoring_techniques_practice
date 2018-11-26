@@ -1,4 +1,4 @@
-package com.tws.refactoring.extract_method;
+package com.tws.refactoring.extract_variable;
 
 import org.junit.After;
 import org.junit.Before;
@@ -11,6 +11,8 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class PriceCalculatorTest {
+public class BannerRenderTest {
+
+
 
 }
